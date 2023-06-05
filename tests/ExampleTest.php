@@ -1,5 +1,9 @@
 <?php
 
+use Konnco\DateExpression\DateExpression;
+
 it('can test', function () {
-    expect(true)->toBeTrue();
+    $date = DateExpression::parse('1d2h');
+    
+    expect($date)->toBe(now()->addDay()->addHours(2));
 });

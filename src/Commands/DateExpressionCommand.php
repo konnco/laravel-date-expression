@@ -1,12 +1,12 @@
 <?php
 
-namespace VendorName\Skeleton\Commands;
+namespace Konnco\DateExpression\Commands;
 
 use Illuminate\Console\Command;
 
-class SkeletonCommand extends Command
+class DateExpressionCommand extends Command
 {
-    public $signature = 'skeleton';
+    public $signature = 'laravel-date-expression';
 
     public $description = 'My command';
 
