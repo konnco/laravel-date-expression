@@ -2,9 +2,9 @@
 
 namespace Konnco\DateExpression;
 
+use Konnco\DateExpression\Commands\DateExpressionCommand;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
-use Konnco\DateExpression\Commands\DateExpressionCommand;
 
 class DateExpressionServiceProvider extends PackageServiceProvider
 {

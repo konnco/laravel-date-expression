@@ -4,7 +4,7 @@ namespace Konnco\DateExpression;
 
 class DateExpression
 {
-public static function parse($expression)
+    public static function parse($expression)
     {
         $carbonDate = now();
 
@@ -22,12 +22,12 @@ public static function parse($expression)
             'd' => 'days',
             'h' => 'hours',
             'mn' => 'minutes',
-            's' => 'seconds'
+            's' => 'seconds',
         ];
 
         // Process each interval
         foreach ($intervals as $interval) {
-            $amount = (int)filter_var($interval, FILTER_SANITIZE_NUMBER_INT);
+            $amount = (int) filter_var($interval, FILTER_SANITIZE_NUMBER_INT);
             $unit = str_replace($amount, '', $interval);
 
             // Check if unit is valid
