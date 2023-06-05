@@ -4,6 +4,7 @@ namespace Konnco\DateExpression\Casts;
 
 use Illuminate\Contracts\Database\Eloquent\CastsAttributes;
 use Illuminate\Database\Eloquent\Model;
+use Konnco\DateExpression\DateExpression;
 
 class DateExpressionCast implements CastsAttributes
 {
@@ -15,7 +16,7 @@ class DateExpressionCast implements CastsAttributes
      */
     public function get($model, string $key, $value, array $attributes): mixed
     {
-        return $value;
+        return DateExpression::parse($value);
     }
 
     /**
@@ -26,6 +27,6 @@ class DateExpressionCast implements CastsAttributes
      */
     public function set($model, string $key, $value, array $attributes): mixed
     {
-        return \Carbon\Carbon::parse($value);
+        return $value;
     }
 }

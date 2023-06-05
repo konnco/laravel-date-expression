@@ -5,13 +5,19 @@ namespace Konnco\DateExpression\Rules;
 use Closure;
 use Illuminate\Contracts\Validation\ValidationRule;
 
-class DateExpressionUnit implements ValidationRule
+class DateExpressionValidator implements ValidationRule
 {
     /**
      * Run the validation rule.
      */
     public function validate(string $attribute, mixed $value, Closure $fail): void
     {
+        if (preg_match('/^\S.*\s.*\S$/', $value)) {
+            $fail('The :attribute cannot contain spaces.');
+
+            return;
+        }
+
         $pattern = '/(\d+[a-z]+)/i';
         preg_match_all($pattern, $value, $matches);
 
