@@ -17,11 +17,11 @@ class DateExpression
         // Define mapping for interval units
         $unitMap = [
             'y' => 'years',
-            'm' => 'months',
+            'mo' => 'months',
             'w' => 'weeks',
             'd' => 'days',
             'h' => 'hours',
-            'mn' => 'minutes',
+            'm' => 'minutes',
             's' => 'seconds',
         ];
 
