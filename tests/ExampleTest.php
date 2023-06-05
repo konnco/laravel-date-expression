@@ -2,8 +2,11 @@
 
 use Konnco\DateExpression\DateExpression;
 
-it('can test', function () {
+use function Pest\Laravel\freezeTime;
+
+it('can test successfully', function () {
+    freezeTime();
     $date = DateExpression::parse('1d2h');
 
-    expect($date)->toBe(now()->addDay()->addHours(2));
+    expect($date->toDateTimeString())->toBe(now()->addDay()->addHours(2)->toDateTimeString());
 });

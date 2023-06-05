@@ -2,6 +2,9 @@
 
 namespace Konnco\DateExpression;
 
+use Illuminate\Validation\ValidationException;
+use Konnco\DateExpression\Rules\DateExpressionValidator;
+
 class DateExpression
 {
     public static function parse($expression)
@@ -11,17 +14,17 @@ class DateExpression
         // Extract the time intervals from the expression
         $pattern = '/(\d+[a-z]+)/i';
         preg_match_all($pattern, $expression, $matches);
-
+        
         $intervals = $matches[0];
 
         // Define mapping for interval units
         $unitMap = [
             'y' => 'years',
-            'm' => 'months',
+            'mo' => 'months',
             'w' => 'weeks',
             'd' => 'days',
             'h' => 'hours',
-            'mn' => 'minutes',
+            'm' => 'minutes',
             's' => 'seconds',
         ];
 
