@@ -1,10 +1,10 @@
 <?php
- 
+
 namespace Konnco\DateExpression\Rules;
- 
+
 use Closure;
 use Illuminate\Contracts\Validation\ValidationRule;
- 
+
 class DateExpressionUnit implements ValidationRule
 {
     /**
@@ -14,7 +14,7 @@ class DateExpressionUnit implements ValidationRule
     {
         $pattern = '/(\d+[a-z]+)/i';
         preg_match_all($pattern, $value, $matches);
-        
+
         $intervals = $matches[0];
 
         foreach ($intervals as $interval) {

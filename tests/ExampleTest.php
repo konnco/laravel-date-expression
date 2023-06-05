@@ -1,7 +1,6 @@
 <?php
 
 use Konnco\DateExpression\DateExpression;
-
 use function Pest\Laravel\freezeTime;
 
 it('can test successfully', function () {
