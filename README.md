@@ -52,8 +52,7 @@ php artisan vendor:publish --tag="laravel-date-expression-views"
 ## Usage
 
 ```php
-$dateExpression = new Konnco\DateExpression();
-echo $dateExpression->echoPhrase('Hello, Konnco!');
+$dateExpression = DateExpression::parse('1d2h');
 ```
 
 ## Testing
