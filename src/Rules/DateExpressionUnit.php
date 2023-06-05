@@ -23,7 +23,7 @@ class DateExpressionUnit implements ValidationRule
 
             // Check if unit is valid
             if (! in_array($unit, ['y', 'mo', 'w', 'd', 'h', 'm', 's'])) {
-                $fail("The :attribute must be contain 'y', 'mo', 'd', 'h', 'm', or 's' only.");
+                $fail("The :attribute must contain 'y', 'mo', 'd', 'h', 'm', or 's' only.");
             }
         }
     }
