@@ -38,4 +38,19 @@ class DateExpression
 
         return $carbonDate;
     }
+
+    public static function parseToSeconds($expression): int
+    {
+        return now()->diffInSeconds(static::parse($expression));
+    }
+
+    public static function parseToMinutes($expression): int
+    {
+        return now()->diffInMinutes(static::parse($expression));
+    }
+
+    public static function parseToHours($expression): int
+    {
+        return now()->diffInHours(static::parse($expression));
+    }
 }
