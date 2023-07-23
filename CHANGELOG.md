@@ -2,6 +2,14 @@
 
 All notable changes to `laravel-date-expression` will be documented in this file.
 
+## 0.1.1 - 2023-07-23
+
+### What's Changed
+
+- Bump dependabot/fetch-metadata from 1.5.1 to 1.6.0 by @dependabot in https://github.com/konnco/laravel-date-expression/pull/3
+
+**Full Changelog**: https://github.com/konnco/laravel-date-expression/compare/0.1.0...0.1.1
+
 ## 0.1.0 - 2023-06-17
 
 **Full Changelog**: https://github.com/konnco/laravel-date-expression/compare/0.0.1...0.1.0
