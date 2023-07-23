@@ -12,7 +12,7 @@ class DateExpressionValidator implements ValidationRule
      */
     public function validate(string $attribute, mixed $value, Closure $fail): void
     {
-        if (!preg_match('/^(?:(\d+[ymowdhs])+|(\d+y)?(\d+mo)?)(\d+w)?(\d+d)?(\d+h)?(\d+m)?(\d+s)?$/', $value)) {
+        if (! preg_match('/^(?:(\d+[ymowdhs])+|(\d+y)?(\d+mo)?)(\d+w)?(\d+d)?(\d+h)?(\d+m)?(\d+s)?$/', $value)) {
             $fail('The :attribute expression not valid. ex: 1 day 12 hours = 1d12h');
         }
     }
