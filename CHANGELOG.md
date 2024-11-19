@@ -2,6 +2,10 @@
 
 All notable changes to `laravel-date-expression` will be documented in this file.
 
+## 0.1.2 - 2024-11-19
+
+**Full Changelog**: https://github.com/konnco/laravel-date-expression/compare/0.1.1...0.1.2
+
 ## 0.1.1 - 2023-07-23
 
 ### What's Changed
